@@ -1,39 +1,46 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  
-  header {
-    background: #0077cc;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-  }
-  
-  header nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  header nav ul li {
-    display: inline;
-    margin: 0 15px;
-  }
-  
-  header nav ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background: #333;
-    color: white;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #0077cc;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main { 
+  margin: 20px auto; /* Center the content horizontally */
+  padding: 20px; /* Add padding around the content */
+  background-color: white; /* Optional: Make the content area stand out */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}

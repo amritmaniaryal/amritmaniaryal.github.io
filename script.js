@@ -1,25 +1,33 @@
-// Script to dynamically load content into the layout
 document.addEventListener("DOMContentLoaded", () => {
-    const contentMap = {
-      "about.html": "content/about-content.html",
-      "research.html": "content/research-content.html",
-      "experience.html": "content/experience-content.html",
-      "cv.html": "content/cv-content.html",
-      "contact.html": "content/contact-content.html",
-      "index.html": "content/home-content.html"
-    };
+    const contentFolder = "content/";
+    const defaultPage = "home.html";
   
+    // Get the current page name or default to "index.html"
     const page = window.location.pathname.split("/").pop() || "index.html";
-    const contentFile = contentMap[page] || "content/home-content.html";
+  
+    // Ensure we only load content files (ignore layout.html or any other non-content files)
+    const contentFile =
+      page === "index.html" || page === "layout.html"
+        ? contentFolder + defaultPage
+        : contentFolder + page;
+  
+    console.log(`Attempting to load content from: ${contentFile}`); // Debugging log
   
     fetch(contentFile)
-      .then((response) => response.text())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Network response was not ok: ${response.status} ${response.statusText}`);
+        }
+        return response.text();
+      })
       .then((data) => {
+        console.log(`Successfully loaded content from: ${contentFile}`);
         document.getElementById("content").innerHTML = data;
       })
       .catch((error) => {
         console.error("Error loading content:", error);
-        document.getElementById("content").innerHTML = "<p>Error loading page content.</p>";
+        document.getElementById("content").innerHTML =
+          "<p>Error loading page content. Please try again later.</p>";
       });
   });
   

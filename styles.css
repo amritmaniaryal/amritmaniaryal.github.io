@@ -32,7 +32,7 @@ header nav ul li a {
 
 main { 
   margin: 20px auto; /* Center the content horizontally */
-  padding: 20px; /* Add padding around the content */
+  padding: 40px; /* Add padding around the content */
   background-color: white; /* Optional: Make the content area stand out */
   border-radius: 10px; /* Optional: Add rounded corners */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */

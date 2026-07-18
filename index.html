@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amrit Aryal | Data Engineer</title>
+  <meta name="description" content="Data Engineer with 3+ years experience building and optimizing ETL pipelines in healthcare, finance, and higher education. Actively seeking opportunities.">
+  <meta property="og:title" content="Amrit Aryal | Data Engineer">
+  <meta property="og:description" content="Building robust data pipelines that power enterprise decisions.">
+  <meta property="og:image" content="./profile.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💾</text></svg>">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="bg-[#0a0a0f]">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="#hero" class="text-xl font-bold text-text-primary font-mono tracking-tight">
+          <span class="text-accent">&gt;</span> amrit
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#about" class="nav-link text-sm">About</a>
+          <a href="#skills" class="nav-link text-sm">Skills</a>
+          <a href="#experience" class="nav-link text-sm">Experience</a>
+          <a href="#education" class="nav-link text-sm">Education</a>
+          <a href="#projects" class="nav-link text-sm">Projects</a>
+          <a href="#contact" class="nav-link text-sm">Contact</a>
+          <a href="./resume.pdf" class="btn-primary text-sm py-2 px-4" target="_blank">
+            Resume
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-text-body hover:text-text-primary transition-colors" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden glass border-t border-border">
+      <div class="px-4 py-4 space-y-3">
+        <a href="#about" class="block text-text-body hover:text-text-primary transition-colors">About</a>
+        <a href="#skills" class="block text-text-body hover:text-text-primary transition-colors">Skills</a>
+        <a href="#experience" class="block text-text-body hover:text-text-primary transition-colors">Experience</a>
+        <a href="#education" class="block text-text-body hover:text-text-primary transition-colors">Education</a>
+        <a href="#projects" class="block text-text-body hover:text-text-primary transition-colors">Projects</a>
+        <a href="#contact" class="block text-text-body hover:text-text-primary transition-colors">Contact</a>
+        <a href="./resume.pdf" class="btn-primary text-sm py-2 px-4 inline-flex" target="_blank">Resume</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="min-h-screen flex items-center relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-[#0a0a0f] via-[#0a0a0f] to-accent/5"></div>
+    <div class="absolute inset-0">
+      <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-accent/5 rounded-full blur-[100px]"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-[120px]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+        <div class="flex-1 order-2 md:order-1">
+          <p class="section-label animate-fade-in">Hello, I'm</p>
+          <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-text-primary mt-2 mb-4 animate-slide-up">
+            Amrit <span class="gradient-text">Aryal</span>
+          </h1>
+          <div class="text-xl sm:text-2xl md:text-3xl text-text-body font-mono mb-6 h-8 animate-fade-in animate-delay-200">
+            <span class="text-accent">&gt;</span> <span id="typed-text"></span><span class="typing-cursor"></span>
+          </div>
+          <p class="text-text-body text-lg max-w-xl leading-relaxed animate-fade-in animate-delay-300">
+            Building robust data pipelines that power enterprise decisions.
+            <span class="block mt-2 text-text-muted text-base">
+              3+ years engineering ETL workflows across healthcare, finance, and education.
+            </span>
+          </p>
+
+          <div class="flex flex-wrap gap-4 mt-8 animate-fade-in animate-delay-400">
+            <a href="#experience" class="btn-primary">
+              View My Work
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </a>
+            <a href="./resume.pdf" class="btn-outline" target="_blank">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+              </svg>
+              Resume
+            </a>
+          </div>
+
+          <div class="flex items-center gap-3 mt-6 animate-fade-in animate-delay-500">
+            <span class="open-to-work">
+              <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+              Actively seeking Data Engineer roles
+            </span>
+          </div>
+        </div>
+
+        <div class="order-1 md:order-2 animate-fade-in">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 rounded-full blur-3xl animate-glow"></div>
+            <img src="./profile.jpg"
+                 alt="Amrit Aryal"
+                 class="relative w-56 h-56 md:w-72 md:h-72 rounded-full object-cover border-2 border-accent/30
+                        shadow-[0_0_40px_rgba(6,182,212,0.15)]">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 md:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-5 gap-12">
+        <div class="md:col-span-3 reveal">
+          <p class="section-label">About Me</p>
+          <h2 class="section-title">Data Engineer <span class="gradient-text">by trade</span></h2>
+          <div class="space-y-4 text-text-body leading-relaxed">
+            <p>
+              I'm a Data Engineer with <strong class="text-text-primary">3+ years of experience</strong> building
+              and optimizing ETL pipelines across healthcare, finance, and higher education.
+              I specialize in transforming raw data into actionable insights using
+              <strong class="text-text-primary">SQL, Python, Apache Spark, dbt, and cloud platforms</strong>
+              including Snowflake, AWS, GCP, and Azure.
+            </p>
+            <p>
+              Currently pursuing my <strong class="text-text-primary">Master's in Computer Science</strong> at
+              Miami University (4.0 GPA), I bridge academic research in machine learning and LLMs with
+              hands-on engineering — automating enterprise workflows, enhancing data quality, and
+              driving operational efficiency at scale.
+            </p>
+            <p>
+              I've led teams through technical transformations, built pipelines processing
+              <strong class="text-text-primary">10M+ daily records</strong>, and integrated
+              AI-powered alerting that slashed incident response times by <strong class="text-text-primary">95%</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="md:col-span-2 reveal animate-delay-200">
+          <div class="card">
+            <h3 class="text-text-primary font-semibold mb-4">Quick Stats</h3>
+            <div class="grid grid-cols-2 gap-6">
+              <div class="text-center">
+                <div class="stat-number">3+</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+              <div class="text-center">
+                <div class="stat-number">30+</div>
+                <div class="stat-label">Clients Served</div>
+              </div>
+              <div class="text-center">
+                <div class="stat-number">10M+</div>
+                <div class="stat-label">Daily Records</div>
+              </div>
+              <div class="text-center">
+                <div class="stat-number">4.0</div>
+                <div class="stat-label">GPA (MS)</div>
+              </div>
+            </div>
+            <div class="mt-6 pt-6 border-t border-border">
+              <div class="flex items-center gap-3">
+                <span class="open-to-work">
+                  <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                  Open to opportunities
+                </span>
+              </div>
+              <p class="text-text-muted text-sm mt-2">Available from May 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 md:py-32 bg-surface/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <p class="section-label">Technical Skills</p>
+        <h2 class="section-title">Tools I <span class="gradient-text">work with</span></h2>
+        <p class="section-desc mx-auto">Technologies I've used across data engineering, cloud, and AI/ML projects.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card-hover reveal animate-delay-100">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
+            </div>
+            <h3 class="text-text-primary font-semibold">Languages</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">PySpark</span>
+            <span class="skill-tag">Scala</span>
+            <span class="skill-tag">C#</span>
+            <span class="skill-tag">R</span>
+            <span class="skill-tag">Shell Script</span>
+          </div>
+        </div>
+
+        <div class="card-hover reveal animate-delay-200">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+              </svg>
+            </div>
+            <h3 class="text-text-primary font-semibold">Databases & Warehouses</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag">Snowflake</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">PL/SQL</span>
+            <span class="skill-tag">BigQuery</span>
+            <span class="skill-tag">Redshift</span>
+          </div>
+        </div>
+
+        <div class="card-hover reveal animate-delay-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-text-primary font-semibold">Data Tools</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag">Airflow</span>
+            <span class="skill-tag">dbt</span>
+            <span class="skill-tag">Spark</span>
+            <span class="skill-tag">Fivetran</span>
+            <span class="skill-tag">Kafka</span>
+            <span class="skill-tag">Pentaho</span>
+            <span class="skill-tag">Hadoop</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">Power BI</span>
+          </div>
+        </div>
+
+        <div class="card-hover reveal animate-delay-100">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h3 class="text-text-primary font-semibold">AI & ML</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag">LangChain</span>
+            <span class="skill-tag">RAG</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">scikit-learn</span>
+            <span class="skill-tag">LLM Workflows</span>
+            <span class="skill-tag">Claude Code</span>
+          </div>
+        </div>
+
+        <div class="card-hover reveal animate-delay-200">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+              </svg>
+            </div>
+            <h3 class="text-text-primary font-semibold">Cloud & DevOps</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag">AWS (EC2, S3)</span>
+            <span class="skill-tag">GCP</span>
+            <span class="skill-tag">Azure</span>
+            <span class="skill-tag">Databricks</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">CI/CD</span>
+          </div>
+        </div>
+
+        <div class="card-hover reveal animate-delay-300">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-text-primary font-semibold">Frameworks & Tools</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">Pentaho</span>
+            <span class="skill-tag">Jira</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">REST API</span>
+            <span class="skill-tag">ETL/ELT</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-20 md:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <p class="section-label">Experience</p>
+        <h2 class="section-title">Where I've <span class="gradient-text">worked</span></h2>
+        <p class="section-desc mx-auto">A track record of building data infrastructure and leading engineering teams.</p>
+      </div>
+
+      <div class="relative max-w-3xl mx-auto">
+        <div class="absolute left-[7px] top-0 bottom-0 w-[2px] bg-zinc-800 hidden md:block"></div>
+
+        <div class="space-y-12">
+          <!-- Miami University -->
+          <div class="relative pl-0 md:pl-10 reveal">
+            <div class="timeline-dot hidden md:block"></div>
+            <div class="card-hover">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-1 mb-3">
+                <h3 class="text-text-primary text-lg font-semibold">Miami University IT Services</h3>
+                <span class="text-accent font-mono text-sm">Jun 2025 – Present</span>
+              </div>
+              <p class="text-accent-glow font-medium mb-3">Data Integration Engineer Intern — BI Unit</p>
+              <ul class="space-y-2 text-text-body text-sm">
+                <li class="flex gap-2">
+                  <span class="text-accent mt-1 shrink-0">▹</span>
+                  Analyzed OAS usage data to extract migration insights, supporting the university's transition to a modern analytics platform.
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-accent mt-1 shrink-0">▹</span>
+                  Automated critical daily reporting by migrating Python scripts from a local scheduler to a serverless GCP pipeline (Cloud Run, Cloud Scheduler).
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-accent mt-1 shrink-0">▹</span>
+                  Enhanced the pipeline with AI-powered Slack alerting that summarizes failures and enables one-click retries, <strong class="text-accent">slashing MTTR by 95%</strong>.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Infinite Computer Solutions -->
+          <div class="relative pl-0 md:pl-10 reveal">
+            <div class="timeline-dot hidden md:block"></div>
+            <div class="card-hover">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-1 mb-3">
+                <h3 class="text-text-primary text-lg font-semibold">Infinite Computer Solutions (formerly Cotiviti)</h3>
+                <span class="text-accent font-mono text-sm">Apr 2024 – Jul 2024</span>
+              </div>
+              <p class="text-accent-glow font-medium mb-3">Data Engineer</p>
+              <ul class="space-y-2 text-text-body text-sm">
+                <li class="flex gap-2">
+                  <span class="text-accent mt-1 shrink-0">▹</span>
+                  Automated 5 healthcare data pipelines using Shell Scripts and PL/SQL, <strong class="text-accent">reducing manual processing time by 25%</strong>.
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-accent mt-1 shrink-0">▹</span>
+                  Validated and integrated public/private data sources using SQL quality checks in Postgres, ensuring <strong class="text-accent">99.8% accuracy</strong> for US healthcare clients.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ExtensoData -->
+          <div class="relative pl-0 md:pl-10 reveal">
+            <div class="timeline-dot hidden md:block"></div>
+            <div class="card-hover">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-1 mb-3">
+                <h3 class="text-text-primary text-lg font-semibold">ExtensoData, F1Soft Group</h3>
+                <span class="text-accent font-mono text-sm">Jan 2022 – Apr 2024</span>
+              </div>
+              <p class="text-accent-glow font-medium mb-3">Data Engineer</p>
+              <ul class="space-y-2 text-text-body text-sm">
+                <li class="flex gap-2">
+                  <span class="text-accent mt-1 shrink-0">▹</span>
+                  Built scalable ETL pipelines with Apache Spark and Airflow across 30+ financial institutions, <strong class="text-accent">improving processing speed by 40%</strong>.
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-accent mt-1 shrink-0">▹</span>
+                  Owned data quality monitoring for pipelines processing <strong class="text-accent">10M+ daily records</strong>, maintaining a perfect zero-critical-incident record.
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-accent mt-1 shrink-0">▹</span>
+                  Collaborated with data scientists to clean and transform transactional data, <strong class="text-accent">increasing ML model accuracy by 20%+</strong>.
+                </li>
+                <li class="flex gap-2">
+                  <span class="text-accent mt-1 shrink-0">▹</span>
+                  Led a team of 10 engineers in transitioning from SQL/Pentaho to Apache Spark/Airflow stack.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Grafi Offshore -->
+          <div class="relative pl-0 md:pl-10 reveal">
+            <div class="timeline-dot hidden md:block"></div>
+            <div class="card-hover">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-1 mb-3">
+                <h3 class="text-text-primary text-lg font-semibold">Grafi Offshore</h3>
+                <span class="text-accent font-mono text-sm">Jun 2021 – Jan 2022</span>
+              </div>
+              <p class="text-accent-glow font-medium mb-3">Software Engineer Intern and Trainee</p>
+              <ul class="space-y-2 text-text-body text-sm">
+                <li class="flex gap-2">
+                  <span class="text-accent mt-1 shrink-0">▹</span>
+                  Assisted senior developers with design, coding, testing, and bug fixes on an ed-tech platform.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-20 md:py-32 bg-surface/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <p class="section-label">Education</p>
+        <h2 class="section-title">Academic <span class="gradient-text">background</span></h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="card-hover reveal">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+              <span class="text-accent font-mono font-bold text-sm">MU</span>
+            </div>
+            <div>
+              <h3 class="text-text-primary font-semibold">Miami University</h3>
+              <p class="text-text-muted text-sm">Oxford, OH</p>
+            </div>
+          </div>
+          <p class="text-accent font-medium text-sm mb-2">Aug 2024 – Jul 2026</p>
+          <p class="text-text-body font-medium">Master of Science in Computer Science</p>
+          <div class="mt-3 flex items-center gap-3">
+            <span class="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">GPA: 4.0</span>
+            <span class="text-text-muted text-xs">Graduate Assistant</span>
+          </div>
+          <p class="text-text-muted text-sm mt-3">Research: Machine Learning, LLMs, Knowledge Representation</p>
+        </div>
+
+        <div class="card-hover reveal animate-delay-200">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+              <span class="text-accent font-mono font-bold text-sm">TU</span>
+            </div>
+            <div>
+              <h3 class="text-text-primary font-semibold">Tribhuvan University</h3>
+              <p class="text-text-muted text-sm">Kathmandu, Nepal</p>
+            </div>
+          </div>
+          <p class="text-accent font-medium text-sm mb-2">Nov 2016 – Apr 2021</p>
+          <p class="text-text-body font-medium">Bachelor of Science in Computer Science</p>
+          <p class="text-text-muted text-sm mt-3">Relevant Coursework: Algorithms, AI, Software Engineering, Computer Networks</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 md:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <p class="section-label">Projects</p>
+        <h2 class="section-title">What I've <span class="gradient-text">built</span></h2>
+        <p class="section-desc mx-auto">Coming soon — stay tuned for highlighted projects.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="card-hover reveal text-center py-12">
+          <div class="w-16 h-16 rounded-2xl bg-accent/5 border border-border flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-accent/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <h3 class="text-text-primary font-medium mb-2">Coming Soon</h3>
+          <p class="text-text-muted text-sm">Project details loading...</p>
+        </div>
+
+        <div class="card-hover reveal animate-delay-200 text-center py-12">
+          <div class="w-16 h-16 rounded-2xl bg-accent/5 border border-border flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-accent/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <h3 class="text-text-primary font-medium mb-2">Coming Soon</h3>
+          <p class="text-text-muted text-sm">Project details loading...</p>
+        </div>
+
+        <div class="card-hover reveal animate-delay-300 text-center py-12">
+          <div class="w-16 h-16 rounded-2xl bg-accent/5 border border-border flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-accent/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <h3 class="text-text-primary font-medium mb-2">Coming Soon</h3>
+          <p class="text-text-muted text-sm">Project details loading...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 md:py-32 bg-surface/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Let's <span class="gradient-text">connect</span></h2>
+        <p class="section-desc mx-auto">
+          I'm actively seeking Data Engineer roles. If you have an opportunity or just want to chat, reach out.
+        </p>
+      </div>
+
+      <div class="max-w-2xl mx-auto reveal">
+        <div class="card">
+          <div class="flex items-center justify-center mb-8">
+            <span class="open-to-work text-base">
+              <span class="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse"></span>
+              Open to work — Available May 2026
+            </span>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-6">
+            <a href="mailto:maniamrit55@gmail.com" class="flex items-center gap-4 p-4 rounded-xl bg-[#0a0a0f] border border-border hover:border-accent/50 transition-all duration-300 group">
+              <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center shrink-0 group-hover:bg-accent/20 transition-colors">
+                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-text-muted text-xs">Email</p>
+                <p class="text-text-primary text-sm group-hover:text-accent transition-colors">maniamrit55@gmail.com</p>
+              </div>
+            </a>
+
+            <a href="https://linkedin.com/in/amritmani/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-xl bg-[#0a0a0f] border border-border hover:border-accent/50 transition-all duration-300 group">
+              <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center shrink-0 group-hover:bg-accent/20 transition-colors">
+                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-text-muted text-xs">LinkedIn</p>
+                <p class="text-text-primary text-sm group-hover:text-accent transition-colors">linkedin.com/in/amritmani</p>
+              </div>
+            </a>
+
+            <a href="https://github.com/amritmaniaryal" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-xl bg-[#0a0a0f] border border-border hover:border-accent/50 transition-all duration-300 group">
+              <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center shrink-0 group-hover:bg-accent/20 transition-colors">
+                <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-text-muted text-xs">GitHub</p>
+                <p class="text-text-primary text-sm group-hover:text-accent transition-colors">github.com/amritmaniaryal</p>
+              </div>
+            </a>
+
+            <div class="flex items-center gap-4 p-4 rounded-xl bg-[#0a0a0f] border border-border">
+              <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-text-muted text-xs">Location</p>
+                <p class="text-text-primary text-sm">Oxford, OH / Kathmandu, Nepal</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-8 border-t border-border text-center">
+            <p class="text-text-muted text-sm">
+              <span class="text-accent">maniamrit55@gmail.com</span> &middot; (283) 219-8439
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-text-muted text-sm">
+          &copy; 2024 Amrit Aryal. Built with
+          <span class="text-accent">&lt;/&gt;</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="mailto:maniamrit55@gmail.com" class="text-text-muted hover:text-accent transition-colors" aria-label="Email">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/amritmani/" target="_blank" rel="noopener noreferrer" class="text-text-muted hover:text-accent transition-colors" aria-label="LinkedIn">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/amritmaniaryal" target="_blank" rel="noopener noreferrer" class="text-text-muted hover:text-accent transition-colors" aria-label="GitHub">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <p class="text-text-muted text-xs">Actively seeking Data Engineer roles &middot; Available May 2026</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

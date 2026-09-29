@@ -33,6 +33,13 @@ export default {
         display: ['"IBM Plex Serif"', 'Georgia', 'serif'],
         mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
       },
+      // One token controls every surface radius. Tailwind's `sm` is 2px, which
+      // is too small to read as a decision - it renders as a slightly chewed
+      // edge. 6px reads as deliberate without drifting back toward the rounded
+      // card look this redesign moved away from.
+      borderRadius: {
+        surface: '0.375rem',
+      },
     },
   },
   plugins: [],

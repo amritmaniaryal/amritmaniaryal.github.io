@@ -34,7 +34,7 @@
   /* Flat surfaces with sharp-ish corners. No lift, no glow: hover changes
      colour only. Decorative motion was removed deliberately. */
   .card {
-    @apply bg-surface rounded-sm border border-border p-6 md:p-8;
+    @apply bg-surface rounded-surface border border-border p-6 md:p-8;
   }
 
   .card-hover {
@@ -42,19 +42,19 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-5 py-3 rounded-sm
+    @apply inline-flex items-center gap-2 px-5 py-3 rounded-surface
            bg-accent text-paper font-medium text-sm
            hover:bg-accent-glow transition-colors duration-200;
   }
 
   .btn-outline {
-    @apply inline-flex items-center gap-2 px-5 py-3 rounded-sm
+    @apply inline-flex items-center gap-2 px-5 py-3 rounded-surface
            border border-border text-text-body font-medium text-sm
            hover:border-accent hover:text-accent transition-colors duration-200;
   }
 
   .skill-tag {
-    @apply px-3 py-1 rounded-sm bg-surface-lift border border-border
+    @apply px-3 py-1 rounded-surface bg-surface-lift border border-border
            text-text-body text-sm font-mono;
   }
 

@@ -7,55 +7,31 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Warm paper ground. The palette is intentionally low-chroma: one
+        // oxide accent against paper and ink, instead of cyan on near-black.
+        paper: '#FAF9F7',
         surface: {
-          DEFAULT: '#111118',
-          lift: '#1a1a2e',
+          DEFAULT: '#FFFFFF',
+          lift: '#F3F1EB',
         },
         accent: {
-          DEFAULT: '#06b6d4',
-          glow: '#22d3ee',
-          dim: '#0891b2',
+          DEFAULT: '#A8442A',
+          glow: '#BE5236',
+          dim: '#8A3722',
         },
         text: {
-          primary: '#f4f4f5',
-          body: '#a1a1aa',
-          muted: '#71717a',
+          primary: '#17171A',
+          body: '#46423C',
+          // Darkened from #7C756C, which measured 4.32:1 on paper and fell
+          // just under the WCAG AA 4.5:1 floor for normal-size text.
+          muted: '#6F6960',
         },
-        border: '#27272a',
+        border: '#E3DFD7',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
-      },
-      animation: {
-        'fade-in': 'fadeIn 0.6s ease-out forwards',
-        'slide-up': 'slideUp 0.6s ease-out forwards',
-        'slide-down': 'slideDown 0.3s ease-out forwards',
-        'typing': 'typing 0.1s ease-out forwards',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'float': 'float 3s ease-in-out infinite',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        slideUp: {
-          '0%': { opacity: '0', transform: 'translateY(30px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        slideDown: {
-          '0%': { opacity: '0', transform: 'translateY(-10px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        glow: {
-          '0%': { boxShadow: '0 0 20px rgba(6, 182, 212, 0.3)' },
-          '100%': { boxShadow: '0 0 40px rgba(6, 182, 212, 0.6)' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
+        sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+        display: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace'],
       },
     },
   },

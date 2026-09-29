@@ -1,3 +1,9 @@
 node_modules/
 dist/
 .DS_Store
+
+# Root-anchored. These are the paths the retired deploy.sh used to write build
+# output and copied files into. The live site is served from the GitHub Actions
+# artifact built into dist/, so nothing belongs here.
+/assets/
+/resume.pdf

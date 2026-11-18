@@ -2,6 +2,10 @@
 export default {
   content: [
     "./index.html",
+    // blog/*.html is generated from src/posts/ at build time. Scanning the
+    // generator too keeps the template classes present even before it runs.
+    "./blog/**/*.html",
+    "./scripts/**/*.js",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {

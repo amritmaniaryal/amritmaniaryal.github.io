@@ -44,6 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Active Nav Link ──
   const updateActiveLink = () => {
+    // Blog pages have no <section id> to spy on. Bail out so the "Blog" link
+    // the page template marks active is not cleared on the first scroll.
+    if (!sections.length) return
+
     let current = ''
     sections.forEach(section => {
       const top = section.offsetTop - 150

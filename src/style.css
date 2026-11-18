@@ -77,4 +77,91 @@
   .nav-link.active::after {
     @apply w-full;
   }
+
+  /* Markdown post bodies. Styled by element so a pasted post only ever needs
+     plain Markdown - no classes, no layout edits. */
+  .post-body {
+    @apply leading-relaxed text-text-body;
+  }
+
+  .post-body > * + * {
+    @apply mt-5;
+  }
+
+  .post-body h2 {
+    @apply mt-12 mb-4 scroll-mt-28 font-display text-2xl font-semibold text-text-primary md:text-3xl;
+  }
+
+  .post-body h3 {
+    @apply mt-9 mb-3 scroll-mt-28 font-display text-xl font-semibold text-text-primary;
+  }
+
+  .post-body h4 {
+    @apply mt-7 mb-2 scroll-mt-28 font-semibold text-text-primary;
+  }
+
+  .post-body a {
+    @apply text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent;
+  }
+
+  .post-body strong {
+    @apply font-semibold text-text-primary;
+  }
+
+  .post-body em {
+    @apply italic;
+  }
+
+  .post-body ul {
+    @apply list-disc space-y-2 pl-6;
+  }
+
+  .post-body ol {
+    @apply list-decimal space-y-2 pl-6;
+  }
+
+  .post-body li > ul,
+  .post-body li > ol {
+    @apply mt-2;
+  }
+
+  .post-body blockquote {
+    @apply border-l-2 border-accent pl-5 text-text-muted;
+  }
+
+  .post-body blockquote p {
+    @apply m-0;
+  }
+
+  .post-body code {
+    @apply rounded-surface border border-border bg-surface-lift px-1.5 py-0.5 font-mono text-[0.9em] text-text-primary;
+  }
+
+  .post-body pre {
+    @apply overflow-x-auto rounded-surface border border-border bg-surface-lift p-4 md:p-5;
+  }
+
+  .post-body pre code {
+    @apply block border-0 bg-transparent p-0 text-sm leading-relaxed;
+  }
+
+  .post-body hr {
+    @apply my-10 border-border;
+  }
+
+  .post-body img {
+    @apply h-auto w-full rounded-surface border border-border;
+  }
+
+  .post-body table {
+    @apply w-full border-collapse text-left text-sm;
+  }
+
+  .post-body th {
+    @apply border-b border-border py-3 pr-4 align-bottom font-mono text-xs font-normal uppercase tracking-wider text-text-muted;
+  }
+
+  .post-body td {
+    @apply border-b border-border py-3 pr-4 align-top;
+  }
 }

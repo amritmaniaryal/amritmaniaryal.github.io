@@ -2,6 +2,10 @@ node_modules/
 dist/
 .DS_Store
 
+# Generated from src/posts/ by scripts/blog.js on every dev/build run. Edit the
+# Markdown files and src/posts/posts.json, never this directory.
+/blog/
+
 # Root-anchored. These are the paths the retired deploy.sh used to write build
 # output and copied files into. The live site is served from the GitHub Actions
 # artifact built into dist/, so nothing belongs here.
